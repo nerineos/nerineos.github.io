@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nerine OS – Modern Debian-Based Gaming Distribution</title>
+    <title>Nerine OS – Advanced Debian-Based Gaming Linux Distribution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVIGATION -->
 <nav>
     <div><a href="index.html"><b>Nerine OS</b></a></div>
     <div>
+        <a href="#overview">Overview</a>
         <a href="download.html">Download</a>
         <a href="desktops.html">Desktops</a>
         <a href="features.html">Features</a>
@@ -25,93 +27,248 @@
 <!-- HERO SECTION -->
 <header class="hero">
     <h1>Nerine OS</h1>
-    <p>A Debian-based gaming and customization-focused Linux distribution.</p>
+    <p>A next-generation Debian-based gaming distribution with enhanced performance, updated drivers,
+        custom installer modes, and three fully optimized desktop environments.</p>
 
-    <a href="download.html" class="btn-primary">Download Nerine OS</a>
-    <a href="features.html" class="btn-secondary">Explore Features</a>
+    <a href="download.html" class="btn-primary hero-btn">Download Nerine OS</a>
+    <a href="#overview" class="btn-secondary hero-btn">Learn More</a>
 </header>
 
-<!-- ABOUT SECTION -->
-<section class="section">
-    <h2>Built for Gaming. Designed for Customization. Powered by Debian.</h2>
+<!-- OVERVIEW SECTION -->
+<section class="section" id="overview">
+    <h2>What is Nerine OS?</h2>
     <p>
-        Nerine OS provides a modern, fast, and stable Linux experience with full compatibility
-        with the Debian ecosystem. Crafted for gamers, creators, and power users, it offers 
-        optimized desktop environments, performance enhancements, and a unified customization layer.
+        Nerine OS is a modern, performance-focused Linux distribution built on top of Debian Testing.
+        It introduces advanced gaming optimizations, updated graphics stacks, custom system services,
+        and a polished interface across KDE Plasma, GNOME, and XFCE.
     </p>
-
     <p>
-        With installation profiles for Gaming, Normal, and Minimal setups,
-        Nerine OS adapts to any system and use case.
+        The goal is to provide an operating system that is fast, stable, customizable, and suitable for gaming,
+        creative work, and everyday use while maintaining full compatibility with APT and the Debian ecosystem.
     </p>
 </section>
 
 <!-- FEATURE GRID -->
 <section class="section">
-    <h2>Core Highlights</h2>
-
+    <h2>Core Features</h2>
     <div class="card-grid">
+
         <div class="card">
-            <h3>Gaming Mode</h3>
+            <h3>Modern Debian Base</h3>
             <p>
-                Includes Steam, Heroic, Lutris, Wine Staging, ProtonUp-Qt, MangoHUD,
-                Gamescope, and Vulkan optimizations.
+                Powered by Debian Testing for modern, stable, and secure software packages while still
+                maintaining the familiar APT package manager.
             </p>
         </div>
 
         <div class="card">
-            <h3>Three Desktop Environments</h3>
+            <h3>Gaming-Optimized Mode</h3>
             <p>
-                KDE Plasma, XFCE, and GNOME editions — each fully themed,
-                configured, and optimized.
+                Steam, Heroic, Lutris, Gamescope, Vulkan, MangoHUD, Wine Staging, and Proton tools included
+                with automatic system tuning.
             </p>
         </div>
 
         <div class="card">
             <h3>NerineBoost Engine</h3>
             <p>
-                System service that automatically tunes CPU, GPU, I/O,
-                audio latency, and compositor effects during gameplay.
+                A system service that enhances performance automatically during gameplay by adjusting
+                CPU governors, GPU profiles, audio latency, I/O schedulers, and compositor settings.
             </p>
         </div>
 
         <div class="card">
-            <h3>Unified Customization</h3>
+            <h3>Advanced Customization Tools</h3>
             <p>
-                Switch global themes, icons, layouts, and boot visuals using the 
-                NerineCustomizer tool.
+                Change global themes, layouts, icons, accents, bootsplash screens, login screens, and
+                desktop effects using the NerineCustomizer.
             </p>
         </div>
 
         <div class="card">
-            <h3>Debian Compatibility</h3>
+            <h3>Calamares Installer</h3>
             <p>
-                Full support for APT, Debian Testing repositories, and
-                all standard `.deb` packages.
+                A modern graphical installer with selectable installation modes:
+                Gaming, Normal, and Minimal, plus driver customization and filesystem options.
             </p>
         </div>
 
         <div class="card">
-            <h3>Installation Profiles</h3>
+            <h3>Updated Graphics Stack</h3>
             <p>
-                Choose between Gaming, Normal, or Minimal installation modes
-                through a custom Calamares installer.
+                Includes updated Vulkan, Mesa, DXVK, and vkBasalt for smooth gaming performance,
+                along with optional proprietary NVIDIA drivers.
             </p>
         </div>
+
+        <div class="card">
+            <h3>Performance Kernels</h3>
+            <p>
+                Support for performance-tuned kernels such as Liquorix and XanMod,
+                ideal for gaming and low-latency workloads.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Optimized Desktop Environments</h3>
+            <p>
+                KDE Plasma, GNOME, and XFCE are themed, stabilized, and configured for consistent
+                usability and efficient performance.
+            </p>
+        </div>
+
     </div>
 </section>
 
-<!-- DOWNLOAD SECTION -->
-<section class="section">
-    <h2>Get Started</h2>
-    <p>Download the edition that fits your workflow and hardware.</p>
+<!-- DESKTOP ENVIRONMENTS SHOWCASE -->
+<section class="section" id="desktops">
+    <h2>Three Desktop Environments</h2>
 
-    <a href="download.html" class="btn-primary">Choose Your Edition</a>
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>KDE Plasma Edition</h3>
+            <p>
+                The flagship edition featuring a modern interface, custom dock layout, blur effects,
+                and advanced theming support. Optimized for Wayland and Plasma 6.
+            </p>
+            <a href="download-kde.html" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>XFCE Edition</h3>
+            <p>
+                Lightweight, stable, and high-performance. Custom panel design, modern window styling,
+                and extremely low resource usage for gaming and older hardware.
+            </p>
+            <a href="download-xfce.html" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>GNOME Edition</h3>
+            <p>
+                Clean, elegant workflow with a custom GNOME Shell theme, curated extensions, and
+                optimized animations on Wayland.
+            </p>
+            <a href="download-gnome.html" class="btn-secondary">Learn More</a>
+        </div>
+
+    </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-    © 2025 Nerine Linux
+<!-- INSTALLATION PROFILES -->
+<section class="section" id="install-modes">
+    <h2>Installation Profiles</h2>
+    <p>Nerine OS includes three different installation modes to fit your system and use case.</p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Gaming Installation</h3>
+            <p>
+                Installs the full gaming stack including Steam, Heroic, Lutris, ProtonUp-Qt, Wine Staging,
+                Gamescope, MangoHUD, and NerineBoost.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Normal Installation</h3>
+            <p>
+                Includes desktop apps, office suite, browser, customization tools, and system utilities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Minimal Installation</h3>
+            <p>
+                A lightweight base with only the essentials, allowing advanced users to build the system
+                their way.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PERFORMANCE HIGHLIGHTS -->
+<section class="section" id="performance">
+    <h2>Performance Highlights</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Fast Boot Times</h3>
+            <p>Optimized system services allow Nerine OS to boot significantly faster than standard Debian.</p>
+        </div>
+
+        <div class="card">
+            <h3>Low Latency Audio</h3>
+            <p>PipeWire configuration reduces audio delay and improves microphone quality during gaming.</p>
+        </div>
+
+        <div class="card">
+            <h3>Stable Frame Times</h3>
+            <p>NerineBoost adjusts system resources dynamically to reduce frame drops and micro-stutter.</p>
+        </div>
+
+        <div class="card">
+            <h3>Updated Hardware Support</h3>
+            <p>Newer kernels, firmware, and graphics drivers offer improved compatibility with modern GPUs.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- COMMUNITY SECTION -->
+<section class="section" id="community">
+    <h2>Join the Community</h2>
+    <p>
+        Become part of the Nerine OS ecosystem. Contribute, report issues, or join discussions with
+        other users and developers.
+    </p>
+    <a href="community.html" class="btn-primary">Community Page</a>
+</section>
+
+<!-- FOOTER WITH MULTI-COLUMN LAYOUT -->
+<footer class="footer-advanced">
+    <div class="footer-grid">
+
+        <div>
+            <h4>Nerine OS</h4>
+            <p>A Debian-based distribution focused on gaming, customization, and performance.</p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="desktops.html">Desktop Environments</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Documentation</h4>
+            <ul>
+                <li><a href="docs.html">Docs Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="developer.html">Developer Guide</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Community</h4>
+            <ul>
+                <li><a href="community.html">Community Hub</a></li>
+                <li><a href="#">Discord (coming soon)</a></li>
+                <li><a href="#">Matrix</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2025 Nerine Linux — All Rights Reserved</p>
 </footer>
 
 </body>
