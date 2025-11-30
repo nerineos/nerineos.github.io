@@ -1,142 +1,15 @@
-# Nerine OS Website Development Guide
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerine OS – Modern Debian-Based Gaming Distribution</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+</head>
 
-This document describes how to build, structure, and deploy the official Nerine OS website.  
-It covers the file layout, page architecture, development workflow, hosting method, and update procedures.
+<body>
 
-The Nerine OS website is a static HTML/CSS/JS site hosted on GitHub Pages.  
-It is designed to be simple to maintain, fast to load, and compatible with any browser or device.
-
----
-
-## 1. Website Directory Structure
-
-The recommended file layout for the website is:
-
-```
-nerinelinux.github.io/
-│
-├── index.html
-├── download.html
-├── download-kde.html
-├── download-xfce.html
-├── download-gnome.html
-├── desktops.html
-├── features.html
-├── docs.html
-├── about.html
-├── community.html
-├── gallery.html
-├── faq.html
-├── roadmap.html
-├── developer.html
-├── changelog.html
-│
-├── styles.css
-├── main.js
-│
-└── assets/
-    ├── images/
-    │   ├── wallpapers/
-    │   └── screenshots/
-    ├── icons/
-    └── logos/
-```
-
-All pages use the same header, footer, styling, and script files for consistency.
-
----
-
-## 2. Description of Each File
-
-### 2.1 HTML Pages
-
-**index.html**  
-Landing page. Introduces Nerine OS, its goals, and links to downloads and features.
-
-**download.html**  
-Shows the three editions (KDE, XFCE, GNOME) and links to their individual pages.
-
-**download-kde.html / download-xfce.html / download-gnome.html**  
-Contain ISO download buttons, edition descriptions, default applications, and screenshots.
-
-**desktops.html**  
-Explains the three desktop environments and their tuning.
-
-**features.html**  
-Details system features, gaming optimizations, customization tools, and base architecture.
-
-**docs.html**  
-Documentation index. Links to installation instructions, troubleshooting, and guides.
-
-**about.html**  
-Describes the project background, goals, and identity.
-
-**community.html**  
-Links to Discord, GitHub Issues, Matrix, Reddit, and other social platforms.
-
-**gallery.html**  
-Screenshot collection for KDE, XFCE, and GNOME editions.
-
-**faq.html**  
-Answers to common questions.
-
-**roadmap.html**  
-Future plans for the project.
-
-**developer.html**  
-Contributor documentation: build system, packaging, code guidelines.
-
-**changelog.html**  
-Release notes and version history.
-
----
-
-## 3. Shared Files
-
-### styles.css  
-Global stylesheet for the entire website. Controls:
-
-- Colors  
-- Layout  
-- Typography  
-- Buttons  
-- Navigation bar  
-- Cards  
-- Page sections  
-- Footer  
-
-### main.js  
-Handles:
-
-- Background effects  
-- Navbar behavior  
-- Smooth scrolling  
-- Optional theme toggle (if added later)
-
-### assets/  
-Contains all images, icons, logos, wallpapers, and screenshots.
-
----
-
-## 4. Creating the Website
-
-Follow these steps to create a clean, functional Nerine OS website.
-
-### Step 1: Write the stylesheet  
-Create a single `styles.css` file that defines:
-
-- Color palette  
-- Layout structure  
-- Responsive design (mobile-friendly)  
-- Components such as buttons, cards, grids  
-- Navigation and footer styling  
-
-Use consistent classes across all HTML pages.
-
-### Step 2: Build the navigation bar  
-Use the same `<nav>` element on every page to maintain uniformity.
-
-```
+<!-- NAVIGATION BAR -->
 <nav>
     <div><a href="index.html"><b>Nerine OS</b></a></div>
     <div>
@@ -148,136 +21,98 @@ Use the same `<nav>` element on every page to maintain uniformity.
         <a href="about.html">About</a>
     </div>
 </nav>
-```
 
-### Step 3: Build the footer  
-Place this at the bottom of every page:
+<!-- HERO SECTION -->
+<header class="hero">
+    <h1>Nerine OS</h1>
+    <p>A Debian-based gaming and customization-focused Linux distribution.</p>
 
-```
+    <a href="download.html" class="btn-primary">Download Nerine OS</a>
+    <a href="features.html" class="btn-secondary">Explore Features</a>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="section">
+    <h2>Built for Gaming. Designed for Customization. Powered by Debian.</h2>
+    <p>
+        Nerine OS provides a modern, fast, and stable Linux experience with full compatibility
+        with the Debian ecosystem. Crafted for gamers, creators, and power users, it offers 
+        optimized desktop environments, performance enhancements, and a unified customization layer.
+    </p>
+
+    <p>
+        With installation profiles for Gaming, Normal, and Minimal setups,
+        Nerine OS adapts to any system and use case.
+    </p>
+</section>
+
+<!-- FEATURE GRID -->
+<section class="section">
+    <h2>Core Highlights</h2>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>Gaming Mode</h3>
+            <p>
+                Includes Steam, Heroic, Lutris, Wine Staging, ProtonUp-Qt, MangoHUD,
+                Gamescope, and Vulkan optimizations.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Three Desktop Environments</h3>
+            <p>
+                KDE Plasma, XFCE, and GNOME editions — each fully themed,
+                configured, and optimized.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>NerineBoost Engine</h3>
+            <p>
+                System service that automatically tunes CPU, GPU, I/O,
+                audio latency, and compositor effects during gameplay.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Unified Customization</h3>
+            <p>
+                Switch global themes, icons, layouts, and boot visuals using the 
+                NerineCustomizer tool.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Debian Compatibility</h3>
+            <p>
+                Full support for APT, Debian Testing repositories, and
+                all standard `.deb` packages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Installation Profiles</h3>
+            <p>
+                Choose between Gaming, Normal, or Minimal installation modes
+                through a custom Calamares installer.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- DOWNLOAD SECTION -->
+<section class="section">
+    <h2>Get Started</h2>
+    <p>Download the edition that fits your workflow and hardware.</p>
+
+    <a href="download.html" class="btn-primary">Choose Your Edition</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
     © 2025 Nerine Linux
 </footer>
-```
 
-### Step 4: Build the landing page  
-The home page should contain:
-
-- A header/hero section  
-- A short introduction  
-- Links to features and downloads  
-- A call to action  
-
-### Step 5: Add download pages  
-Each DE has its own page.  
-When the ISOs are published via GitHub Releases, link to them using:
-
-```
-https://github.com/YOUR-USER/nerine-os/releases/download/v1.0/nerine-kde.iso
-```
-
-Use a button:
-
-```
-<a href="URL_HERE" class="btn-primary">Download ISO</a>
-```
-
-### Step 6: Add screenshots  
-Place images in:
-
-```
-assets/images/screenshots/
-```
-
-Use `<img>` tags in `gallery.html` and the download pages.
-
-### Step 7: Add documentation  
-Update the `docs.html` page with installation instructions, gaming mode descriptions, and troubleshooting.
-
----
-
-## 5. Hosting the Website on GitHub Pages
-
-### Step 1: Upload Files  
-Push the entire website folder to the GitHub repository:
-
-```
-nerinelinux.github.io
-```
-
-### Step 2: Enable GitHub Pages  
-Navigate to:
-
-Settings → Pages →  
-Select:  
-- Branch: main  
-- Folder: / (root)
-
-Save.
-
-GitHub will generate the site at:
-
-```
-https://YOUR-USERNAME.github.io
-```
-
-### Step 3: Connect your custom domain  
-If you own `nerinelinux.com`, configure DNS:
-
-A records:
-```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-CNAME:
-```
-www → YOUR-USERNAME.github.io
-```
-
-Then in GitHub Pages, set:
-
-```
-nerinelinux.com
-```
-
-Enable HTTPS.
-
----
-
-## 6. Updating the Website
-
-To update a page:
-
-1. Edit the HTML, CSS, or JS  
-2. Commit changes  
-3. Push to GitHub  
-
-GitHub Pages redeploys automatically.
-
-For local testing, open any file in a browser:
-
-```
-index.html
-```
-
----
-
-## 7. Optional Enhancements
-
-- Responsive mobile layout  
-- Light/dark theme switch  
-- Download mirrors page  
-- ISO checksums  
-- Documentation sub-site  
-- Release version pages  
-- Package repository index page  
-
----
-
-## 8. Summary
-
-This guide provides the complete instructions for building, structuring, and deploying the Nerine OS website.  
-Following this architecture ensures a maintainable, professional, and fast website suitable for a full Linux distribution.
-
+</body>
+</html>
