@@ -1,6 +1,4 @@
-/* ---------------------------------------------
-   GLOBAL RESET + BASE
---------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +13,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ---------------------------------------------
-   NAVIGATION BAR
---------------------------------------------- */
 nav {
     width: 100%;
     padding: 15px 40px;
@@ -44,9 +39,6 @@ nav a:hover {
     color: #70a5ff;
 }
 
-/* ---------------------------------------------
-   HERO SECTION
---------------------------------------------- */
 .hero {
     padding: 180px 40px 140px 40px;
     text-align: center;
@@ -71,9 +63,6 @@ nav a:hover {
     margin: 10px;
 }
 
-/* ---------------------------------------------
-   BUTTONS
---------------------------------------------- */
 .btn-primary {
     display: inline-block;
     padding: 14px 32px;
@@ -104,9 +93,6 @@ nav a:hover {
     background: rgba(255,255,255,0.15);
 }
 
-/* ---------------------------------------------
-   SECTIONS
---------------------------------------------- */
 .section {
     padding: 100px 40px;
     text-align: center;
@@ -161,9 +147,6 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* ---------------------------------------------
-   FOOTER (ADVANCED MULTI-COLUMN)
---------------------------------------------- */
 .footer-advanced {
     padding: 60px 40px;
     background: #0a1322;
@@ -207,9 +190,6 @@ footer ul li a:hover {
     font-size: 14px;
 }
 
-/* ---------------------------------------------
-   RESPONSIVENESS
---------------------------------------------- */
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
